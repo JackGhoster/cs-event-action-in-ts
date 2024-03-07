@@ -17,7 +17,7 @@ class Action<T>{
         this.#events = this.#events.filter(obs => observer !== obs);
     }
 
-    invoke(t : T){
+    invoke(value : T){
        for(let i = 0; i < this.#events.length; ++i){
         let event = this.#events[i];
         event(t);
